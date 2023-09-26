@@ -1,0 +1,65 @@
+class Node:
+    def __init__(self,data,next=None):
+        self.data=data
+        self.next=next
+class LinkedList:
+    def __init__(self):
+        self.head=None
+    def __str__(self):
+        node=self.head
+        result=[]
+        while node is not None:
+            result.append(str(node.data))
+            node=node.next
+        return '->'.join(result)
+    def append(self,data):
+        if not self.head:
+            self.head=Node(data)
+            return
+        current=self.head
+        while current.next:
+            current=current.next
+        current.next=Node(data)
+    def search(self,target):
+        if not self.head:
+            return 'linked list is empty'
+        current=self.head
+        while current:
+            if current.data==target:
+                return True
+            else:
+                current=current.next
+        return False
+    def pop(self,target):
+        if not self.head:
+            return 'linked list is empty'
+        if self.head==target:
+            self.head=self.head.next
+            return
+        current=self.head
+        previous =None
+        while current:
+            if current.data==target:
+                if previous:
+                    previous.next=current.next
+                else:
+                    self.head=current.next
+                return
+            previous=current
+            current=current.next
+        return f"{target} not found"
+    def reverse(self):
+        current=self.head
+        previous=None
+        while current:
+            next=current.next
+            current.next=previous
+            previous=current
+            current=next
+        self.head=previous
+a=LinkedList()     
+a.append(20)
+a.append(30)
+print(a)
+a.reverse()
+print(a)

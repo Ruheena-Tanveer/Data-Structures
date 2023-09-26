@@ -1,0 +1,77 @@
+class Stack:
+    def __init__(self):
+        self.items=[]
+    def push(self,data):
+        return self.items.append(data)
+    def pop(self):
+        if len(self.items)==0:
+            return "stack is empty"
+        else:
+            return self.items.pop()
+    def is_empty(self):
+        if len(self.items)==0:
+            return 'stack is empty'
+        else:
+            return f'stack is not empty it has {len(self.items)} items in it'
+            
+    def peek(self):
+        if len(self.items)==0:
+            return 'stack is empty'
+        else:
+            return self.items[-1]
+    def size(self):
+        return len(self.items)
+a=Stack()
+a.push(20)
+a.push(30)
+a.push(10)
+print(a.pop())
+print(a.peek())
+print(a.is_empty())
+print(a.size())
+
+
+
+------------------------------------------------------------------------------------------------------
+class Stack:
+    def __init__(self):
+        self.items=[]
+    def push(self,data):
+        return self.items.append(data)
+        print(stack)
+    def pop(self):
+        if len(self.items)==0:
+            return "stack is empty"
+        else:
+            return self.items.pop()
+    def is_empty(self):
+        if len(self.items)==0:
+            return 'stack is empty'
+        else:
+            return f'stack is not empty it has {len(self.items)} items in it'
+            
+    def peek(self):
+        if len(self.items)==0:
+            return 'stack is empty'
+        else:
+            return self.items[-1]
+    def size(self):
+        return len(self.items)
+a=Stack()
+while True:
+    print("what do you want to do?1.push 2.pop 3.check size 4.check if empty 5.peek 6.exit")
+    choice=int(input('enter choice:'))
+    if choice==1:
+        data=int(input('enter the item'))
+        a.push(data)
+    elif choice==2:
+        print(a.pop())
+    elif choice==3:
+        print(a.size())
+    elif choice==4:
+        print(a.is_empty())
+    elif choice==5:
+        print(a.peek())
+    else:
+        break;
+        

@@ -1,0 +1,23 @@
+class Node():
+    def __init__(self,data,next_address=None):
+        self.data=data
+        self.next_address=None
+class LinkedList():
+    def __init__(self):
+        self.head=None 
+    def begin(self,data):
+        new_node=Node(data)
+        new_node.next_address=self.head
+        self.head=new_node
+    def between(self,data):
+        pass
+    def print_LL(self):
+        current_node=self.head
+        while(current_node):
+            print(current_node.data,end='---->')
+            current_node=current_node.next_address
+        print(None)
+a=LinkedList()
+a.begin(10)
+a.begin(20)
+a.print_LL()

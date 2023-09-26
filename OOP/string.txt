@@ -1,0 +1,67 @@
+String Concatenation:
+You can concatenate strings and variables using the + operator. This method is simple but can become less readable for complex formatting.
+
+python
+Copy code
+name = "Alice"
+age = 30
+formatted_string = "My name is " + name + " and I am " + str(age) + " years old."
+print(formatted_string)
+String Formatting with % (Old-Style Formatting):
+Python supports the % operator for string formatting. You can use placeholders and the % operator to substitute values into a string.
+
+python
+Copy code
+name = "Alice"
+age = 30
+formatted_string = "My name is %s and I am %d years old." % (name, age)
+print(formatted_string)
+str.format() Method:
+The str.format() method allows you to create formatted strings by specifying placeholders and then using the .format() method to fill them with values.
+
+python
+Copy code
+name = "Alice"
+age = 30
+formatted_string = "My name is {} and I am {} years old.".format(name, age)
+print(formatted_string)
+
+
+
+
+In Python, the {} (curly braces) are used as placeholders within strings to perform string formatting. This allows you to create strings where certain parts can be dynamically replaced with values or expressions. This string formatting technique is often referred to as "string interpolation" or "f-strings."
+
+Starting from Python 3.6 and later versions, you can use f-strings, which are formatted string literals. F-strings make string formatting more concise and readable by allowing you to embed expressions and variables directly within string literals using curly braces {}.
+
+
+
+
+
+
+
+Basic Variable Insertion:
+You can embed variable values directly into a string using f-strings by placing an f or F character before the string, and then placing the variables or expressions inside curly braces {} within the string.
+
+python
+Copy code
+name = "Alice"
+age = 30
+print(f"My name is {name} and I am {age} years old.")
+# Output: My name is Alice and I am 30 years old.
+Expression Evaluation:
+You can also include expressions within f-strings, and Python will evaluate them and insert the result into the string.
+
+python
+Copy code
+x = 5
+y = 10
+print(f"The sum of {x} and {y} is {x + y}.")
+# Output: The sum of 5 and 10 is 15.
+Formatting Options:
+F-strings support various formatting options that allow you to control the appearance of the inserted values, such as specifying the number of decimal places for floating-point numbers.
+
+python
+Copy code
+price = 19.99
+print(f"The price is ${price:.2f}")
+# Output: The price is $19.99
